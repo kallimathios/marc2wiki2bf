@@ -1,0 +1,4 @@
+requests>=2.31
+rapidfuzz>=3.6
+rdflib>=7.0
+pymarc>=5.0

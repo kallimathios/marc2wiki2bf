@@ -1,0 +1,67 @@
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.loc.gov/vocabulary/carriers/nc> a bf:Carrier ;
+    rdfs:label "volume" .
+
+<http://id.loc.gov/vocabulary/contentTypes/txt> a bf:Content ;
+    rdfs:label "text" .
+
+<http://id.loc.gov/vocabulary/countries/au> a bf:Place .
+
+<http://id.loc.gov/vocabulary/issuance/mono> a bf:Issuance .
+
+<http://id.loc.gov/vocabulary/mediaTypes/n> a bf:Media ;
+    rdfs:label "unmediated" .
+
+<http://id.loc.gov/vocabulary/millus/a> a bf:Illustration .
+
+<https://dev.bcld.info/instances/f20d5772-c07b-5192-b8e2-0a70d92e13c8> a bf:Instance ;
+    bf:carrier <http://id.loc.gov/vocabulary/carriers/nc> ;
+    bf:dimensions "25 cm." ;
+    bf:extent [ a bf:Extent ;
+            rdfs:label "2 v." ] ;
+    bf:identifiedBy [ a bf:OclcNumber ;
+            rdf:value "6260" ] ;
+    bf:instanceOf <https://dev.bcld.info/works/088d4c02-d604-5104-b896-35885402937f> ;
+    bf:issuance <http://id.loc.gov/vocabulary/issuance/mono> ;
+    bf:media <http://id.loc.gov/vocabulary/mediaTypes/n> ;
+    bf:note [ a bf:Note ;
+            rdfs:label "English, German and French." ] ;
+    bf:provisionActivity [ a bf:Publication ;
+            bf:agent [ a bf:Agent ;
+                    rdfs:label "Springer-Verlag," ] ;
+            bf:date "1961" ;
+            bf:place <http://id.loc.gov/vocabulary/countries/au> ] ;
+    bf:title [ a bf:Title ;
+            bf:mainTitle "Proceedings of the 11th International astronautical congress" ;
+            bf:subtitle "Stockholm, August 15-20, 1960." ] .
+
+<https://dev.bcld.info/works/088d4c02-d604-5104-b896-35885402937f> a bf:Work ;
+    bf:content <http://id.loc.gov/vocabulary/contentTypes/txt> ;
+    bf:contribution [ a bf:Contribution,
+                bf:PrimaryContribution ;
+            bf:agent [ a bf:Person ;
+                    rdfs:label "International Astronautical Congress" ] ;
+            bf:role <http://id.loc.gov/vocabulary/relators/aut> ],
+        [ a bf:Contribution ;
+            bf:agent [ a bf:Agent ;
+                    rdfs:label "Small Sounding Rockets Symposium." ] ] ;
+    bf:hasInstance <https://dev.bcld.info/instances/f20d5772-c07b-5192-b8e2-0a70d92e13c8> ;
+    bf:illustrativeContent <http://id.loc.gov/vocabulary/millus/a> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng>,
+        <http://id.loc.gov/vocabulary/languages/fre>,
+        <http://id.loc.gov/vocabulary/languages/ger> ;
+    bf:originDate "1961" ;
+    bf:subject [ a bf:Topic ;
+            rdfs:label "Astronautics." ],
+        [ a bf:Topic ;
+            rdfs:label "Rockets (Aeronautics)" ],
+        [ a bf:Topic ;
+            rdfs:label "Space flight." ] ;
+    bf:tableOfContents [ a bf:TableOfContents ;
+            rdfs:label "v. 1. Main sessions, edited by C.W.P. Reuterswärd.--v. 2. Small sounding rockets symposium, edited by Å. Hjertstrand." ] ;
+    bf:title [ a bf:Title ;
+            bf:mainTitle "Proceedings of the 11th International astronautical congress" ] .
+
