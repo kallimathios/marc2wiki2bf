@@ -10,6 +10,15 @@ GLAMs* (JOHD, DOI 10.5334/johd.454): match at the most specific level
 you can, keep Work and Instance distinct, and never assert an
 uncertain match as fact.
 
+## AI Assistance
+
+Significant portions of this project — including code, documentation, 
+and design decisions — were developed with the assistance of Claude 
+(Anthropic). All AI-assisted code and modeling choices were reviewed, 
+tested, and verified against authoritative sources (the LC 
+marc2bibframe2 XSLT, the BIBFRAME OWL ontology, and live production 
+BIBFRAME records) before inclusion.
+
 ## Install
 
 ```bash
